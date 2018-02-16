@@ -40,6 +40,8 @@ alias gph='git push'
 alias gphf='git push -f'
 alias gpl='git pull'
 alias g+='git add .'
+alias g-='git reset'
+alias g--='git reset --hard'
 
 #Rebase your current branch from master
 alias rebase@current='git checkout master && git pull && git checkout - && git rebase master'
