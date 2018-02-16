@@ -36,7 +36,18 @@ It's that simple...
 # ----------------------
 
 alias g='git'
-alias rebase@master='git checkout master && git pull && git checkout - && git rebase master'
+alias gph='git push'
+alias gphf='git push -f'
+alias gpl='git pull'
+alias g+='git add .'
+
+#Rebase your current branch from master
+alias rebase@current='git checkout master && git pull && git checkout - && git rebase master'
+
+#Rebase the master branch from current
+alias rebase@master='git checkout master && git pull && git rebase - && git push -f && git checkout -'
+
+#You screwed up - clean it up and try again
 alias whoops='git reset --hard HEAD && git clean -fd'
 ```
 
