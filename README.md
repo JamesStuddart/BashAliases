@@ -47,7 +47,7 @@ alias g--='git reset --hard'
 alias rebase@current='git checkout master && git pull && git checkout - && git rebase master'
 
 #Rebase the master branch from current
-alias rebase@master='git checkout master && git pull && git rebase - && git push -f && git checkout -'
+alias rebase@master='git checkout master && git pull && git rebase - && git push && git checkout -'
 
 #You screwed up - clean it up and try again
 alias whoops='git reset --hard HEAD && git clean -fd'
