@@ -51,5 +51,8 @@ alias rebase@master='git checkout master && git pull && git rebase - && git push
 
 #You screwed up - clean it up and try again
 alias whoops='git reset --hard HEAD && git clean -fd'
+
+#Remove all local branches, that are no longer on the remote server
+alias cleanbranches='git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D'
 ```
 
