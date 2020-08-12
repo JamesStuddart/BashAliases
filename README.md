@@ -53,6 +53,6 @@ alias rebase@master='git checkout master && git pull && git rebase - && git push
 alias whoops='git reset --hard HEAD && git clean -fd'
 
 #Remove all local branches, that are no longer on the remote server
-alias cleanbranches="git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
+alias cleanbranches="git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d"
 ```
 
